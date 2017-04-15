@@ -14,7 +14,7 @@ Dieses Projekt befindet sich in der Entwicklung.
 
 # Schnittstellen
 
-## /publicTransportRouing/service/foot?latlnglatlng={lat,lng,lat,lng}
+## /feetandbikerouting/service/foot?latlnglatlng={lat,lng,lat,lng}
 
 # Download OSM-Data
 
