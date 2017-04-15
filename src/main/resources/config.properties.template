@@ -1,0 +1,10 @@
+# in dieser Datei wird die Anwendung konfiguriert. 
+# Sie ist nur eine Vorlage. 
+# Die fehlenden Einträge müssen ergänzt werden.
+# Danach ist die Datei in config.properties zu kopieren.
+encoding=UTF-8
+dateformat=dd.MM.yyyy hh:mm
+graphhopper.graphFolder=/var/cache/publictransport
+graphhopper.osmFile=/var/cache/publictransport/koeln-regbez-latest.osm.pbf
+graphhopper.encoding=foot,bike
+graphhopper.weighting=fastest
