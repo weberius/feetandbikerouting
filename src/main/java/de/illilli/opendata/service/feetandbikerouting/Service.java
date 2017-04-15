@@ -64,7 +64,7 @@ public class Service {
 
 		String fromTo = request.getParameter("fromTo");
 
-		Facade facade = new RoutingFacade(vehicle, fromTo);
+		Facade facade = null;
 		if ("foot".equals(vehicle)) {
 			facade = new RoutingFacade(vehicle, fromTo);
 		} else {
