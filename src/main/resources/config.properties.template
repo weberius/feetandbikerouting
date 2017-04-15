@@ -8,3 +8,4 @@ graphhopper.graphFolder=/var/cache/publictransport
 graphhopper.osmFile=/var/cache/publictransport/koeln-regbez-latest.osm.pbf
 graphhopper.encoding=foot,bike
 graphhopper.weighting=fastest
+error.service.vehicle={"msg":"vehicle not supported"}

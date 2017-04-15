@@ -14,7 +14,11 @@ Dieses Projekt befindet sich in der Entwicklung.
 
 # Schnittstellen
 
-## /feetandbikerouting/service/foot?latlnglatlng={lat,lng,lat,lng}
+## /feetandbikerouting/service/foot?fromTo={lat,lng,lat,lng}
+
+Beispiel [/feetandbikerouting/service/foot?fromTo={lat,lng,lat,lng}](https://tom.cologne.codefor.de/feetandbikerouting/service/foot?fromTo=50.940214,6.953710,50.940356,6.961413)
+
+Beispiel [/feetandbikerouting/service/bike?fromTo={lat,lng,lat,lng}](https://tom.cologne.codefor.de/feetandbikerouting/service/bike?fromTo=50.940214,6.953710,50.940356,6.961413)
 
 # Download OSM-Data
 

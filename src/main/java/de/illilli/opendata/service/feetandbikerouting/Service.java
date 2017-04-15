@@ -15,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 import org.apache.log4j.Logger;
 
 import de.illilli.opendata.service.Config;
+import de.illilli.opendata.service.Facade;
 
 @Path("/")
 public class Service {
@@ -40,6 +41,19 @@ public class Service {
 		return "{alive}";
 	}
 
+	/**
+	 * <p>
+	 * Beispiel: <a href=
+	 * "http://localhost:8080/feetandbikerouting/service/foot?fromTo=50.940214,6.953710,50.940356,6.961413">
+	 * /feetandbikerouting/service/foot?fromTo=50.940214,6.953710,50.940356,6.
+	 * 961413</a>
+	 * </p>
+	 * 
+	 * @param vehicle
+	 * @return
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 */
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Path("/{vehicle}")
@@ -48,7 +62,16 @@ public class Service {
 		request.setCharacterEncoding(ENCODING);
 		response.setCharacterEncoding(ENCODING);
 
-		return "{alive}";
+		String fromTo = request.getParameter("fromTo");
+
+		Facade facade = new RoutingFacade(vehicle, fromTo);
+		if ("foot".equals(vehicle)) {
+			facade = new RoutingFacade(vehicle, fromTo);
+		} else {
+			facade = new ErrorFacade("error.service.vehicle");
+		}
+
+		return facade.getJson();
 	}
 
 }
