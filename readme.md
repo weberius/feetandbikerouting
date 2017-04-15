@@ -1,6 +1,6 @@
 # Feet And Bike Routing
 
-Dieser Service erlaubt es zwischen zwei Geokoordinaten eine Fussgänger Routing auf Basis von [graphhopper]((https://www.graphhopper.com/) durchzuführen. Die Ergebnisse werden benötigt, um für die Applikation [publicdepartcologne.github.io](https://publicdepartcologne.github.io) eine zuverlässigere Abschätzung der Zeit abgeben zu können, ob eine Haltestelle zum Zeitpunkt der Abfahrt eines Verkehrsmittels erreichbar ist. Darüber hinaus kann hiermit der Weg gezeigt werden, der genommen werden muss, die entsprechende Haltestelle zu erreichen.
+Dieser Service erlaubt es zwischen zwei Geokoordinaten eine Fussgänger Routing auf Basis von [graphhopper](https://www.graphhopper.com/) durchzuführen. Die Ergebnisse werden benötigt, um für die Applikation [publicdepartcologne.github.io](https://publicdepartcologne.github.io) eine zuverlässigere Abschätzung der Zeit abgeben zu können, ob eine Haltestelle zum Zeitpunkt der Abfahrt eines Verkehrsmittels erreichbar ist. Darüber hinaus kann hiermit der Weg gezeigt werden, der genommen werden muss, die entsprechende Haltestelle zu erreichen.
 
 # Entwicklungsstand
 
