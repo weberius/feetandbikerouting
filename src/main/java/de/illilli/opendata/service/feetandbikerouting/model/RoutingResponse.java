@@ -3,7 +3,9 @@ package de.illilli.opendata.service.feetandbikerouting.model;
 public class RoutingResponse {
 
 	private double distance;
+	private String distanceFormatted;
 	private long time;
+	private String timeFormatted;
 
 	public double getDistance() {
 		return distance;
@@ -13,48 +15,28 @@ public class RoutingResponse {
 		this.distance = distance;
 	}
 
-	/**
-	 *
-	 * @return time in ms
-	 */
+	public String getDistanceFormatted() {
+		return distanceFormatted;
+	}
+
+	public void setDistanceFormatted(String distanceFormatted) {
+		this.distanceFormatted = distanceFormatted;
+	}
+
 	public long getTime() {
 		return time;
 	}
 
-	public void setTime(long timeInMs) {
-		this.time = timeInMs;
+	public void setTime(long time) {
+		this.time = time;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		long temp;
-		temp = Double.doubleToLongBits(distance);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + (int) (time ^ (time >>> 32));
-		return result;
+	public String getTimeFormatted() {
+		return timeFormatted;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		RoutingResponse other = (RoutingResponse) obj;
-		if (Double.doubleToLongBits(distance) != Double.doubleToLongBits(other.distance))
-			return false;
-		if (time != other.time)
-			return false;
-		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "RoutingResponse [distance=" + distance + ", timeInMs=" + time + "]";
+	public void setTimeFormatted(String timeFormatted) {
+		this.timeFormatted = timeFormatted;
 	}
 
 }

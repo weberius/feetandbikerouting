@@ -26,7 +26,11 @@ public class RoutingFacade implements Facade {
 		PathWrapper path = askFor.getData();
 		// set Data
 		data.setDistance(path.getDistance());
+		int meter = (int) Math.round(path.getDistance());
+		data.setDistanceFormatted(meter + " m");
 		data.setTime(path.getTime());
+		int minutes = Math.round(path.getTime() / 60000);
+		data.setTimeFormatted(minutes + " Min.");
 	}
 
 	@Override
