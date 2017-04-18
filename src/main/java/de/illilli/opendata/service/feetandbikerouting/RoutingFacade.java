@@ -29,7 +29,8 @@ public class RoutingFacade implements Facade {
 		int meter = (int) Math.round(path.getDistance());
 		data.setDistanceInMeter(meter + "");
 		data.setTime(path.getTime());
-		int minutes = Math.round(path.getTime() / 60000);
+		// add 1 Minute for every request.
+		int minutes = Math.round(path.getTime() / 60000) + 1;
 		data.setTimeInMinutes(minutes + "");
 	}
 
