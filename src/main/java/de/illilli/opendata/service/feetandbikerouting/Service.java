@@ -66,8 +66,10 @@ public class Service {
 
 		Facade facade = null;
 		if ("foot".equals(vehicle)) {
+			logger.info("request /feetandbikerouting/service/foot?fromTo=" + fromTo);
 			facade = new RoutingFacade(vehicle, fromTo);
 		} else {
+			logger.error("request /feetandbikerouting/service/" + vehicle + "?fromTo=" + fromTo + " not available");
 			facade = new ErrorFacade("error.service.vehicle");
 		}
 
