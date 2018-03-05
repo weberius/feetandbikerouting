@@ -25,6 +25,10 @@ Beispiel [/feetandbikerouting/service/bike?fromTo={lat,lng,lat,lng}](https://tom
 Die Applikation benötigt einen Extract der OSM Daten für die Graphhopper Engine. Dieser kann über wget heruntergeladen werden. Das Routing gilt nur im Rahmen des Regierungsbezirks Köln.
 
     wget http://download.geofabrik.de/europe/germany/nordrhein-westfalen/koeln-regbez-latest.osm.pbf
+    
+Wenn wget nicht zur Verfügung steht, kann auch curl verwendet werden:
+    
+    curl http://download.geofabrik.de/europe/germany/nordrhein-westfalen/koeln-regbez-latest.osm.pbf --output koeln-regbez-latest.osm.pbf
 
 Der Ort der Datei wird in der config.properties festgelegt. Auf Unix-Systemen bietet sich hierfür das /var/cache - Verzeichnis an:
 
@@ -34,9 +38,11 @@ Der Ort der Datei wird in der config.properties festgelegt. Auf Unix-Systemen bi
 # Installation
 
 1. Checkout Sources
-2. Build Application
-3. Check Config
-4. Download OSM-Data
+2. Check Config:
+   Die Konfiguration kann vom Template übernommen werden, wenn das Verzeichnis für graphhopper.graphFolder und die OSM-Data für Köln verwendet werden können
+3. Download OSM-Data:
+   Vor dem build der Applikation ist es notwendig die OSM-Data zu laden. Durch den Test RoutingFacadeTest wird graphhopper vorbereitet. 
+4. Build Application
 5. Deploy Application
 
 # License
